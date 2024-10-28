@@ -82,7 +82,7 @@ class Restaurant_pizzasResource(Resource):
             db.session.commit()
             return RestaurantPizza.query.first().to_dict(), 201
         except ValueError as e:
-            return e, 400
+            return e, 500
 
 
 @app.route("/")
